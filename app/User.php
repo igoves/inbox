@@ -27,4 +27,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Get the subjects
+     */
+    public function subjects()
+    {
+        return $this->hasMany(Subject::class);
+    }
 }
